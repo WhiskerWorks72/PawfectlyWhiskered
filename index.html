@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WhiskerWorks - Creative pet projects, fun videos, and useful gear for pet owners. Featuring Archie & Rocko from Pawfectly Whiskered YouTube channel.">
+    <title>WhiskerWorks - Creative Pet Projects & Gear</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'whisker-orange': '#FF8C42',
+                        'whisker-blue': '#4A90E2',
+                        'whisker-green': '#7ED957',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-whisker-orange">🐾 WhiskerWorks</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-whisker-orange transition-colors">Home</a>
+                    <a href="#features" class="nav-link text-gray-700 hover:text-whisker-orange transition-colors">Features</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-whisker-orange transition-colors">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-whisker-orange transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-whisker-orange">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-whisker-orange rounded-md">Home</a>
+                <a href="#features" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-whisker-orange rounded-md">Features</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-whisker-orange rounded-md">About</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-whisker-orange rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-whisker-orange to-orange-400 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+                    🐶 Welcome to WhiskerWorks
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    The home of creative pet projects, fun videos, and useful gear for pet owners!
+                </p>
+                <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                    Featuring Archie & Rocko from the Pawfectly Whiskered YouTube channel
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#features" class="bg-white text-whisker-orange px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                        Explore Projects
+                    </a>
+                    <a href="https://youtube.com/@PawfectlyWhiskered" target="_blank" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-whisker-orange transition-all transform hover:scale-105">
+                        YouTube Channel
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#f9fafb"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What We Offer</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Explore our collection of DIY pet inventions, 3D prints, and favorite gear
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4">🎥</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Fun Pet Videos</h3>
+                    <p class="text-gray-600">
+                        Watch Archie & Rocko in action! From training tips to hilarious moments, our YouTube channel has it all.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 2 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">DIY Pet Projects</h3>
+                    <p class="text-gray-600">
+                        Creative inventions and hacks to make life with pets more fun, smart, and connected.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 3 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4">🖨️</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">3D Printed Gear</h3>
+                    <p class="text-gray-600">
+                        Custom 3D printed accessories and tools designed specifically for pet owners.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 4 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4">⭐</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Affiliate Gear</h3>
+                    <p class="text-gray-600">
+                        Hand-picked products we actually use and love for our furry friends.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 5 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">WhiskerWorks Products</h3>
+                    <p class="text-gray-600">
+                        Updates on our own branded products designed to enhance your pet parenting experience.
+                    </p>
+                </div>
+                
+                <!-- Feature Card 6 -->
+                <div class="feature-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-4xl mb-4">🌟</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Community</h3>
+                    <p class="text-gray-600">
+                        Join our growing community of creative pet owners who love to innovate!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Meet the Stars</h2>
+                    <h3 class="text-2xl font-semibold text-whisker-orange mb-4">Archie & Rocko</h3>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        The lovable duo behind Pawfectly Whiskered! Our mission is to share creative pet projects, entertaining videos, and helpful gear recommendations with fellow pet lovers.
+                    </p>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        From DIY inventions to 3D printed accessories, we're constantly exploring new ways to make pet ownership more enjoyable, innovative, and fun.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://youtube.com/@PawfectlyWhiskered" target="_blank" class="bg-whisker-orange text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors">
+                            Subscribe on YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-whisker-blue to-blue-500 rounded-2xl p-8 text-white text-center">
+                    <div class="text-8xl mb-4">🐕 🐶</div>
+                    <h3 class="text-2xl font-bold mb-2">Archie & Rocko</h3>
+                    <p class="text-lg">The Pawfectly Whiskered Team</p>
+                    <div class="mt-6 pt-6 border-t border-white/30">
+                        <p class="text-sm opacity-90">
+                            "Making pet life more fun, one project at a time!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gradient-to-r from-whisker-blue to-blue-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2" data-count="100">0+</div>
+                    <div class="text-sm opacity-90">Videos Created</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2" data-count="50">0+</div>
+                    <div class="text-sm opacity-90">DIY Projects</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2" data-count="1000">0+</div>
+                    <div class="text-sm opacity-90">Happy Pets</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2" data-count="25">0+</div>
+                    <div class="text-sm opacity-90">3D Designs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Get in Touch</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Have questions or want to collaborate? We'd love to hear from you!
+            </p>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-center gap-3">
+                        <span class="text-2xl">📧</span>
+                        <a href="mailto:hello@whiskerworks.com" class="text-whisker-orange hover:text-orange-600 text-lg">
+                            hello@whiskerworks.com
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <span class="text-2xl">🎥</span>
+                        <a href="https://youtube.com/@PawfectlyWhiskered" target="_blank" class="text-whisker-orange hover:text-orange-600 text-lg">
+                            @PawfectlyWhiskered
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🐾 WhiskerWorks</h3>
+                    <p class="text-gray-400">
+                        Creative pet projects and gear for the modern pet owner.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-whisker-orange transition-colors">Home</a></li>
+                        <li><a href="#features" class="hover:text-whisker-orange transition-colors">Features</a></li>
+                        <li><a href="#about" class="hover:text-whisker-orange transition-colors">About</a></li>
+                        <li><a href="#contact" class="hover:text-whisker-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <a href="https://youtube.com/@PawfectlyWhiskered" target="_blank" class="hover:text-whisker-orange transition-colors">
+                                YouTube - Pawfectly Whiskered
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 WhiskerWorks. All rights reserved. Built with ❤️ for pet lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 bg-whisker-orange text-white p-3 rounded-full shadow-lg hover:bg-orange-600 transition-all opacity-0 pointer-events-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
