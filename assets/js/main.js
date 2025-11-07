@@ -127,5 +127,5 @@ if ('loading' in HTMLImageElement.prototype) {
 // ============================================
 // CONSOLE EASTER EGG (Optional fun)
 // ============================================
-console.log('%c🐾 WhiskerWorks ', 'background: #F59E0B; color: #0F172A; font-size: 20px; font-weight: bold; padding: 10px;');
+console.log('%c🐾 Pawfectly Whiskered ', 'background: #F59E0B; color: #0F172A; font-size: 20px; font-weight: bold; padding: 10px;');
 console.log('%cLooking for something? Check out our GitHub: https://github.com/WhiskerWorks72/WhiskerWorks', 'color: #F59E0B; font-size: 14px;');
