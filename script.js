@@ -1,5 +1,8 @@
 // WhiskerWorks - Vanilla JavaScript for interactive elements
 
+// Constants
+const NAV_HEIGHT = 64; // Height of fixed navigation in pixels
+
 // Mobile menu toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -25,8 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-            const navHeight = 64; // Height of fixed navigation
-            const targetPosition = targetElement.offsetTop - navHeight;
+            const targetPosition = targetElement.offsetTop - NAV_HEIGHT;
             
             window.scrollTo({
                 top: targetPosition,
@@ -39,15 +41,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Scroll to top button
 const scrollTopButton = document.getElementById('scroll-top');
 
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
+// Add active state to navigation links based on scroll position
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Combined scroll handler for better performance
+const handleScroll = () => {
+    const scrollPosition = window.pageYOffset;
+    
+    // Show/hide scroll to top button
+    if (scrollPosition > 300) {
         scrollTopButton.classList.remove('opacity-0', 'pointer-events-none');
         scrollTopButton.classList.add('opacity-100');
     } else {
         scrollTopButton.classList.add('opacity-0', 'pointer-events-none');
         scrollTopButton.classList.remove('opacity-100');
     }
-});
+    
+    // Update active navigation link
+    let current = '';
+    const scrollOffset = scrollPosition + 100;
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (scrollOffset >= sectionTop && scrollOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('text-whisker-orange', 'font-semibold');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('text-whisker-orange', 'font-semibold');
+        }
+    });
+};
+
+window.addEventListener('scroll', handleScroll);
 
 scrollTopButton.addEventListener('click', () => {
     window.scrollTo({
@@ -87,31 +119,6 @@ const statsObserver = new IntersectionObserver((entries) => {
 // Observe all stat counters
 document.querySelectorAll('[data-count]').forEach(stat => {
     statsObserver.observe(stat);
-});
-
-// Add active state to navigation links based on scroll position
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPosition = window.pageYOffset + 100;
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('text-whisker-orange', 'font-semibold');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('text-whisker-orange', 'font-semibold');
-        }
-    });
 });
 
 // Add hover effect to feature cards
