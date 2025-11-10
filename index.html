@@ -3,29 +3,519 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawfectly Whiskered</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="WhiskerWorks - Home of Archie, Rocco, Des & Pete. DIY pet tech, gear reviews, and innovative pet products.">
+    
+    <!-- SEO & Social -->
+    <title>WhiskerWorks – Where Pets Meet Innovation</title>
+    <meta property="og:title" content="WhiskerWorks – Home of Archie, Rocco, Des & Pete">
+    <meta property="og:description" content="DIY pet tech • Gear reviews • YouTube Shorts">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Pawfectly Whiskered</h1>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="paw-loader">🐾</div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">WhiskerWorks</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#crew" class="nav-link">The Crew</a></li>
+                <li><a href="#gear" class="nav-link">Gear</a></li>
+                <li><a href="#merch" class="nav-link">Merch</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#donate" class="nav-link">Support</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
     </header>
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We are dedicated to providing the best care for your pets.</p>
-            <img src="../Archie.JPG" alt="Archie">
-        </section>
-        <section>
-            <h2>Our Services</h2>
-        </section>
-        <section>
-            <h2>Testimonials</h2>
-            <img src="../Rocco.JPG" alt="Rocco">
-        </section>
-    </main>
-    <footer>
-        <p>Contact us at info@pawfectlywhiskered.com</p>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/4009465/4009465-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">WhiskerWorks</h1>
+            <p class="hero-subtitle">Where Pets Meet Innovation</p>
+            <div class="hero-buttons">
+                <a href="https://www.youtube.com/@PawfectlyWhiskered" target="_blank" class="btn btn-primary">
+                    <span class="btn-icon">▶️</span> Watch on YouTube
+                </a>
+                <a href="https://www.youtube.com/@PawfectlyWhiskered?sub_confirmation=1" target="_blank" class="btn btn-secondary">
+                    <span class="btn-icon">🔔</span> Subscribe
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Crew Section -->
+    <section id="crew" class="section crew-section">
+        <div class="container">
+            <h2 class="section-title">Meet the Crew</h2>
+            <p class="section-subtitle">The furry faces behind WhiskerWorks</p>
+            
+            <div class="crew-grid">
+                <!-- Archie -->
+                <div class="crew-card">
+                    <div class="crew-image-wrapper">
+                        <img src="Archie.JPG" alt="Archie - Golden Retriever" class="crew-image">
+                        <div class="crew-overlay">
+                            <span class="crew-icon">🐕</span>
+                        </div>
+                    </div>
+                    <div class="crew-info">
+                        <h3 class="crew-name">Archie</h3>
+                        <p class="crew-breed">Golden Retriever</p>
+                        <ul class="crew-facts">
+                            <li>🎥 Camera enthusiast</li>
+                            <li>🥐 Croissant connoisseur</li>
+                            <li>😴 Professional napper</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rocco -->
+                <div class="crew-card">
+                    <div class="crew-image-wrapper">
+                        <img src="Rocco.JPG" alt="Rocco - Bulldog" class="crew-image">
+                        <div class="crew-overlay">
+                            <span class="crew-icon">🐕</span>
+                        </div>
+                    </div>
+                    <div class="crew-info">
+                        <h3 class="crew-name">Rocco</h3>
+                        <p class="crew-breed">English Bulldog</p>
+                        <ul class="crew-facts">
+                            <li>😎 Chief of operations</li>
+                            <li>🍖 Treat inspector</li>
+                            <li>🏋️ Fitness skeptic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pete -->
+                <div class="crew-card">
+                    <div class="crew-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500" alt="Pete - Orange Tabby" class="crew-image">
+                        <div class="crew-overlay">
+                            <span class="crew-icon">🐱</span>
+                        </div>
+                    </div>
+                    <div class="crew-info">
+                        <h3 class="crew-name">Pete</h3>
+                        <p class="crew-breed">Orange Tabby</p>
+                        <ul class="crew-facts">
+                            <li>🧠 Tech genius</li>
+                            <li>🎮 Keyboard walker</li>
+                            <li>📦 Box enthusiast</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Des -->
+                <div class="crew-card">
+                    <div class="crew-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10c1dd4f2e14?w=500" alt="Des - Tuxedo Cat" class="crew-image">
+                        <div class="crew-overlay">
+                            <span class="crew-icon">🐱</span>
+                        </div>
+                    </div>
+                    <div class="crew-info">
+                        <h3 class="crew-name">Des</h3>
+                        <p class="crew-breed">Tuxedo Cat</p>
+                        <ul class="crew-facts">
+                            <li>🎩 Fancy dresser</li>
+                            <li>🌙 Night owl</li>
+                            <li>🐾 Silent supervisor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gear Section -->
+    <section id="gear" class="section gear-section">
+        <div class="container">
+            <h2 class="section-title">Recommended Gear</h2>
+            <p class="section-subtitle">Products we actually use and love</p>
+            
+            <div class="gear-grid">
+                <!-- Product 1 -->
+                <div class="gear-card">
+                    <div class="gear-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500" alt="Pet Camera" class="gear-image">
+                        <span class="gear-badge">⭐ Editor's Choice</span>
+                    </div>
+                    <div class="gear-info">
+                        <h3 class="gear-name">Smart Pet Camera</h3>
+                        <p class="gear-description">HD video, treats dispenser, two-way audio</p>
+                        <a href="https://amzn.to/12345" target="_blank" class="btn-gear">
+                            View on Amazon →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="gear-card">
+                    <div class="gear-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1591769225440-811ad7d6eab3?w=500" alt="Automatic Feeder" class="gear-image">
+                        <span class="gear-badge">🔥 Popular</span>
+                    </div>
+                    <div class="gear-info">
+                        <h3 class="gear-name">Automatic Feeder</h3>
+                        <p class="gear-description">Schedule meals, portion control, voice recording</p>
+                        <a href="https://amzn.to/12345" target="_blank" class="btn-gear">
+                            View on Amazon →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="gear-card">
+                    <div class="gear-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1444212477490-ca407925329e?w=500" alt="GPS Tracker" class="gear-image">
+                        <span class="gear-badge">🛡️ Safety</span>
+                    </div>
+                    <div class="gear-info">
+                        <h3 class="gear-name">GPS Pet Tracker</h3>
+                        <p class="gear-description">Real-time tracking, virtual fences, activity monitor</p>
+                        <a href="https://amzn.to/12345" target="_blank" class="btn-gear">
+                            View on Amazon →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="gear-card">
+                    <div class="gear-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=500" alt="Interactive Toy" class="gear-image">
+                        <span class="gear-badge">🎮 Fun</span>
+                    </div>
+                    <div class="gear-info">
+                        <h3 class="gear-name">Interactive Laser Toy</h3>
+                        <p class="gear-description">Auto-play mode, random patterns, USB rechargeable</p>
+                        <a href="https://amzn.to/12345" target="_blank" class="btn-gear">
+                            View on Amazon →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="gear-card">
+                    <div class="gear-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500" alt="Water Fountain" class="gear-image">
+                        <span class="gear-badge">💧 Essential</span>
+                    </div>
+                    <div class="gear-info">
+                        <h3 class="gear-name">Cat Water Fountain</h3>
+                        <p class="gear-description">Ultra-quiet pump, triple filtration, 2L capacity</p>
+                        <a href="https://amzn.to/12345" target="_blank" class="btn-gear">
+                            View on Amazon →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="gear-card">
+                    <div class="gear-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=500" alt="Grooming Kit" class="gear-image">
+                        <span class="gear-badge">✨ Quality</span>
+                    </div>
+                    <div class="gear-info">
+                        <h3 class="gear-name">Pro Grooming Kit</h3>
+                        <p class="gear-description">Low-noise clippers, 5 guide combs, cordless design</p>
+                        <a href="https://amzn.to/12345" target="_blank" class="btn-gear">
+                            View on Amazon →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merch Section -->
+    <section id="merch" class="section merch-section">
+        <div class="container">
+            <h2 class="section-title">WhiskerWorks Merch</h2>
+            <p class="section-subtitle">Exclusive products coming soon</p>
+            
+            <div class="merch-grid">
+                <!-- Merch Item 1 -->
+                <div class="merch-card">
+                    <div class="merch-icon">👕</div>
+                    <h3 class="merch-name">Premium T-Shirts</h3>
+                    <p class="merch-description">Soft cotton with exclusive WhiskerWorks designs</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+
+                <!-- Merch Item 2 -->
+                <div class="merch-card">
+                    <div class="merch-icon">☕</div>
+                    <h3 class="merch-name">Coffee Mugs</h3>
+                    <p class="merch-description">Start your day with Archie, Rocco, Pete & Des</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+
+                <!-- Merch Item 3 -->
+                <div class="merch-card">
+                    <div class="merch-icon">🧢</div>
+                    <h3 class="merch-name">Baseball Caps</h3>
+                    <p class="merch-description">Adjustable fit with embroidered logo</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+
+                <!-- Merch Item 4 -->
+                <div class="merch-card">
+                    <div class="merch-icon">📱</div>
+                    <h3 class="merch-name">Phone Cases</h3>
+                    <p class="merch-description">Protect your phone with pet-powered style</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+            </div>
+
+            <div class="notify-box">
+                <p>Want to be notified when merch drops?</p>
+                <form id="notifyForm" class="notify-form">
+                    <input type="email" placeholder="Enter your email" required class="notify-input">
+                    <button type="submit" class="btn btn-primary">Notify Me</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section videos-section">
+        <div class="container">
+            <h2 class="section-title">Latest YouTube Shorts</h2>
+            <p class="section-subtitle">60 seconds of pure pet chaos</p>
+            
+            <div class="videos-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="YouTube Short 1">
+                        <div class="play-overlay">
+                            <span class="play-icon">▶️</span>
+                        </div>
+                        <span class="shorts-badge">SHORTS</span>
+                    </div>
+                    <h3 class="video-title">DIY Pet Tech Project #1</h3>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="YouTube Short 2">
+                        <div class="play-overlay">
+                            <span class="play-icon">▶️</span>
+                        </div>
+                        <span class="shorts-badge">SHORTS</span>
+                    </div>
+                    <h3 class="video-title">Archie's Camera Review</h3>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="YouTube Short 3">
+                        <div class="play-overlay">
+                            <span class="play-icon">▶️</span>
+                        </div>
+                        <span class="shorts-badge">SHORTS</span>
+                    </div>
+                    <h3 class="video-title">Rocco's Treat Testing</h3>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="YouTube Short 4">
+                        <div class="play-overlay">
+                            <span class="play-icon">▶️</span>
+                        </div>
+                        <span class="shorts-badge">SHORTS</span>
+                    </div>
+                    <h3 class="video-title">Pete's Tech Setup</h3>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="YouTube Short 5">
+                        <div class="play-overlay">
+                            <span class="play-icon">▶️</span>
+                        </div>
+                        <span class="shorts-badge">SHORTS</span>
+                    </div>
+                    <h3 class="video-title">Des's Night Patrol</h3>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="YouTube Short 6">
+                        <div class="play-overlay">
+                            <span class="play-icon">▶️</span>
+                        </div>
+                        <span class="shorts-badge">SHORTS</span>
+                    </div>
+                    <h3 class="video-title">Behind The Scenes</h3>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3>Don't miss new uploads!</h3>
+                <a href="https://www.youtube.com/@PawfectlyWhiskered?sub_confirmation=1" target="_blank" class="btn btn-primary btn-lg">
+                    Subscribe on YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="section donate-section">
+        <div class="container">
+            <h2 class="section-title">Support WhiskerWorks</h2>
+            <p class="section-subtitle">Help us create more pet tech content</p>
+            
+            <div class="donate-grid">
+                <!-- PayPal -->
+                <div class="donate-card">
+                    <div class="donate-icon">💳</div>
+                    <h3 class="donate-method">PayPal</h3>
+                    <p class="donate-description">Secure one-time or recurring donations</p>
+                    <a href="https://paypal.me/whiskerworks" target="_blank" class="btn-donate">
+                        Donate via PayPal
+                    </a>
+                </div>
+
+                <!-- Venmo -->
+                <div class="donate-card">
+                    <div class="donate-icon">📱</div>
+                    <h3 class="donate-method">Venmo</h3>
+                    <p class="donate-description">Quick and easy mobile payments</p>
+                    <a href="https://venmo.com/whiskerworks" target="_blank" class="btn-donate">
+                        Donate via Venmo
+                    </a>
+                </div>
+
+                <!-- Ko-fi -->
+                <div class="donate-card">
+                    <div class="donate-icon">☕</div>
+                    <h3 class="donate-method">Ko-fi</h3>
+                    <p class="donate-description">Buy us a coffee (or treats!)</p>
+                    <a href="https://ko-fi.com/whiskerworks" target="_blank" class="btn-donate">
+                        Donate via Ko-fi
+                    </a>
+                </div>
+            </div>
+
+            <div class="support-note">
+                <p>💙 Your support helps us buy new gear, create better content, and keep the crew well-fed!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Contact Form -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Contact Form -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Get in Touch</h3>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="4" required class="form-textarea"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#crew">The Crew</a></li>
+                        <li><a href="#gear">Gear</a></li>
+                        <li><a href="#merch">Merch</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#donate">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@PawfectlyWhiskered" target="_blank" class="social-link" aria-label="YouTube">
+                            <span>▶️</span>
+                        </a>
+                        <a href="https://instagram.com/whiskerworks" target="_blank" class="social-link" aria-label="Instagram">
+                            <span>📷</span>
+                        </a>
+                        <a href="https://twitter.com/whiskerworks" target="_blank" class="social-link" aria-label="Twitter">
+                            <span>🐦</span>
+                        </a>
+                        <a href="https://tiktok.com/@whiskerworks" target="_blank" class="social-link" aria-label="TikTok">
+                            <span>🎵</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 WhiskerWorks. All rights reserved.</p>
+                <p>Built with ❤️ for Archie, Rocco, Pete & Des</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
